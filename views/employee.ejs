@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Employee Dashboard</title>
+</head>
+<body>
+
+<h1>Employee Dashboard</h1>
+
+<h3>Upload New Work</h3>
+
+<form action="/upload" method="POST" enctype="multipart/form-data">
+
+    <label>Work Title</label>
+    <br>
+    <input type="text" name="title" required>
+
+    <br><br>
+
+    <label>Select File</label>
+    <br>
+    <input type="file" name="file" required>
+
+    <br><br>
+
+    <button type="submit">
+        Upload Work
+    </button>
+
+</form>
+
+<br><br>
+
+<br><br>
+
+<h3>My Submissions</h3>
+
+<table border="1">
+
+<tr>
+    <th>Title</th>
+    <th>Status</th>
+    <th>Comment</th>
+</tr>
+
+<% submissions.forEach(item => { %>
+
+<tr>
+    <td><%= item.title %></td>
+    <td><%= item.status %></td>
+    <td><%= item.comments || '' %></td>
+</tr>
+
+<% }) %>
+
+</table>
+
+<br><br>
+
+<a href="/logout">Logout</a>
+
+</body>
+</html>

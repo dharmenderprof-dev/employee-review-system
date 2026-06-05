@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Reviewer Dashboard</title>
+</head>
+<body>
+
+<h1>Reviewer Dashboard</h1>
+
+<table border="1">
+
+<tr>
+<th>ID</th>
+<th>Title</th>
+<th>Filename</th>
+<th>Status</th>
+<th>Comment</th>
+<th>Actions</th>
+</tr>
+
+<% submissions.forEach(item => { %>
+
+<tr>
+    <td><%= item.id %></td>
+    <td><%= item.title %></td>
+    <td><%= item.filename %></td>
+    <td><%= item.status %></td>
+<td>
+
+<form action="/comment/<%= item.id %>" method="POST">
+
+<input
+type="text"
+name="comment"
+placeholder="Write comment">
+
+<button type="submit">
+Save
+</button>
+
+</form>
+
+</td>
+<td>
+
+<form action="/approve/<%= item.id %>" method="POST" style="display:inline;">
+<button type="submit">
+Approve
+</button>
+</form>
+
+<form action="/reject/<%= item.id %>" method="POST" style="display:inline;">
+<button type="submit">
+Reject
+</button>
+</form>
+
+</td>
+
+</tr>
+
+<% }) %>
+
+</table>
+
+<br>
+
+<a href="/logout">Logout</a>
+
+</body>
+</html>
+
