@@ -297,7 +297,7 @@ This project provided hands-on experience with:
 
 Dharmender
 
-Aspiring DevOps Engineer | Application Security Enthusiast
+Aspiring DevOps Engineer | 
 
 ---
 
