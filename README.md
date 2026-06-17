@@ -49,7 +49,7 @@ In addition to application development, this project focuses on implementing rea
 * Dockerized Application
 * PostgreSQL Persistent Storage
 * Nginx Reverse Proxy
-* Automated CI/CD Pipeline
+* Automated CI/CD Pipelin
 * Ubuntu Server Deployment
 
 ---
