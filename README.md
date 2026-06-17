@@ -14,7 +14,7 @@ The system allows administrators, managers, and employees to interact through ro
 
 In addition to application development, this project focuses on implementing real-world DevOps practices including containerization, automated deployments, infrastructure management, and CI/CD automation.
 
----
+----
 
 ## Features
 
